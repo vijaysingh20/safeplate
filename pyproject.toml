@@ -1,0 +1,35 @@
+[project]
+name = "safeplate"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Vijay Singh", email = "vijaysingh79413@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "dspy>=3.4.1",
+    "faiss-cpu>=1.15.1",
+    "neo4j>=6.4.1",
+    "pydantic>=2.14.1",
+    "pydantic-settings>=2.16.1",
+    "pyyaml>=6.0.3",
+    "rank-bm25>=0.2.2",
+    "sentence-transformers>=6.2.0",
+    "sqlglot>=30.24.0",
+    "streamlit>=1.66.0",
+    "torch>=2.14.1",
+]
+
+[project.scripts]
+safeplate = "safeplate:main"
+
+[build-system]
+requires = ["uv_build>=0.11.21,<0.12.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+    "ruff>=0.17.1",
+]
